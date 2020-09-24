@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+<a href="javascript:void(0)" class="ham-burger">
+		<span></span>
+		<span></span>
+		</a>
+		<div class="nav">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="service.html">Services</a></li>
+				<li><a href="classes.html">Classes</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="price.html">Price</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="cre.html">Creator</a></li>
+			</ul>
+	</div>
+</header>
+<section class="price-package" id="price">
+  	 <div class="container">
+  	 	  <h2>Choose Your Package</h2>
+  	 	  <p class="title-p">According to your requirements of your body type please select any of the following package.</p>
+  	 	  <div class="content">
+  	 	  	  <div class="box">
+  	 	  	  	  <div class="inner">
+  	 	  	  	  	   <div class="img">
+  	 	  	  	  	   	 <img src="gym-images/price1.jpg" alt="price" >
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="text">
+  	 	  	  	  	   	  <h3>Body Building Training</h3>
+  	 	  	  	  	   	  <p>Running</p>
+  	 	  	  	  	   	  <p>Weighted Pullups</p>
+  	 	  	  	  	   	  <p>Weighted Pushups</p>
+  	 	  	  	  	   	  <p>Weighted Dips</p>
+  	 	  	  	  	   	  <p>Weighted Lunges</p>
+  	 	  	  	  	   	  <a href="dync.html" class="btn">Join Now</a>
+  	 	  	  	  	   </div>
+  	 	  	  	  </div>
+  	 	  	  </div>
+  	 	  	  <div class="box" data-wow-delay="0.2s">
+  	 	  	  	  <div class="inner">
+  	 	  	  	  	   <div class="img">
+  	 	  	  	  	   	 <img src="gym-images/price2.jpg" alt="price" >
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="text">
+  	 	  	  	  	   	  <h3>Sports Training</h3>
+  	 	  	  	  	   	  <p>Light Rummimg</p>
+  	 	  	  	  	   	  <p>Pushups</p>
+  	 	  	  	  	   	  <p>Pullups</p>
+  	 	  	  	  	   	  <p>Dips</p>
+  	 	  	  	  	   	  <p>Lunges</p>
+  	 	  	  	  	   	  <a href="dync.html" class="btn">Join Now</a>
+  	 	  	  	  	   </div>
+  	 	  	  	  </div>
+  	 	  	  </div>
+  	 	  	  <div class="box" data-wow-delay="0.4s">
+  	 	  	  	  <div class="inner">
+  	 	  	  	  	   <div class="img">
+  	 	  	  	  	   	 <img src="gym-images/price3.jpeg" height=285 width=360alt="price" >
+  	 	  	  	  	   </div>
+  	 	  	  	  	   <div class="text">
+  	 	  	  	  	   	  <h3>Physical Fitness Training</h3>
+  	 	  	  	  	   	  <p>Jogging</p>
+  	 	  	  	  	   	  <p>Pushups</p>
+  	 	  	  	  	   	  <p>Pullups</p>
+  	 	  	  	  	   	  <p>Cardio</p>
+  	 	  	  	  	   	  <p>Weighted Squarts</p>
+  	 	  	  	  	   	  <a href="dync.html" class="btn">Join Now</a>
+  	 	  	  	  	   </div>
+  	 	  	  	  </div>
+  	 	  	  </div>
+  	 	  </div>
+  	 </div>
+  </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$(".ham-burger").click(function(){
+			$(".nav").toggleClass("open")
+			$(this).toggleClass("active")
+		})
+		$(".accordian-container").click(function(){
+			$(".accordian-container").children(".body").slideUp();
+			$(".accordian-container").removeClass("active")
+			$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+			$(this).children(".body").slideDown();
+			$(this).addClass("active")
+			$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+		})
+	})
+</script>
+</body>
+</html>

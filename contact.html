@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+<a href="javascript:void(0)" class="ham-burger">
+		<span></span>
+		<span></span>
+		</a>
+		<div class="nav">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="service.html">Services</a></li>
+				<li><a href="classes.html">Classes</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="price.html">Price</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="cre.html">Creator</a></li>
+			</ul>
+	</div>
+<section class="contact" id="contact" >
+     <div class="container">
+        <div class="content">
+            <div class="box form">
+               <form action="cont.php" method="post">
+                  <input type="text" name="name" placeholder="Enter Name">
+                  <input type="text" name="email" placeholder="Enter Email">
+                  <input type="text" name="mobile" placeholder="Enter Mobile">
+                  <textarea name="message" placeholder="Enter Message"></textarea>
+                  <button type="submit">Send Message</button>
+               </form>
+            </div>
+            <div class="box text">
+                 <h2>Get Connected with Gym</h2>
+                  <p class="title-p">You can find our contact details here.</p>
+                  <div class="info">
+                      <ul>
+                          <li><span class="fa fa-map-marker"></span> Thakur Village,Mumbai.</li>
+                          <li><span class="fa fa-phone"></span> 91 9999999999</li>
+                          <li><span class="fa fa-envelope"></span> info@gym.com</li>
+                      </ul>
+                  </div>
+                  <div class="social">
+                       <a href=""><span class="fa fa-facebook"></span></a>
+                       <a href=""><span class="fa fa-linkedin"></span></a>
+                       <a href=""><span class="fa fa-skype"></span></a>
+                       <a href=""><span class="fa fa-youtube-play"></span></a>
+                  </div>
+            </div>
+        </div>
+     </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$(".ham-burger").click(function(){
+			$(".nav").toggleClass("open")
+			$(this).toggleClass("active")
+		})
+		$(".accordian-container").click(function(){
+			$(".accordian-container").children(".body").slideUp();
+			$(".accordian-container").removeClass("active")
+			$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+			$(this).children(".body").slideDown();
+			$(this).addClass("active")
+			$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+		})
+	})
+</script>
+</body>
+</html>

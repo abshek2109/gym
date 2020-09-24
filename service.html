@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+<a href="javascript:void(0)" class="ham-burger">
+		<span></span>
+		<span></span>
+		</a>
+		<div class="nav">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="service.html">Services</a></li>
+				<li><a href="classes.html">Classes</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="price.html">Price</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="cre.html">Creator</a></li>
+			</ul>
+	</div>
+<section class="service" id="service">
+	<div class="container">
+		<div class="content">
+			<div class="text box">
+				<h2>Services</h2>
+				<p>We provide a lot of services like online fitness training,bodybuilding training,
+				stretching training and online consultation. </p>
+				<a href="dync.html" class="btn">Start Now</a>
+			</div>
+			<div class="accordian box">
+				<div class="accordian-container active">
+					<div class="head">
+						<h4>Cardio Equipment</h4>
+						<span class="fa fa-angle-down"></span>
+					</div>
+					<div class="body">
+						<p>This includes all stamina training exercises
+						that you can perform in gym as well as at home like running or jogging.</p>
+					</div>
+				</div>
+				<div class="accordian-container">
+					<div class="head">
+						<h4>Strength Training Equipment</h4>
+						<span class="fa fa-angle-up"></span>
+					</div>
+					<div class="body">
+						<p>This includes all strength training exercises
+						that you can perform in gym as well as at home like pushups and pullups.</p>
+					</div>
+				</div>
+				<div class="accordian-container">
+					<div class="head">
+						<h4>Group Training</h4>
+						<span class="fa fa-angle-up"></span>
+					</div>
+					<div class="body">
+						<p>This includes all training exercises that you can do in groups and 
+						can also be performed in gym as well as at home like zumba.</p>
+					</div>
+				</div>
+				<div class="accordian-container">
+					<div class="head">
+						<h4>Other services</h4>
+						<span class="fa fa-angle-up"></span>
+					</div>
+					<div class="body">
+						<p>This includes all training exercises with our personal trainer and guide 
+						that you can perform in gym as well as at home like pushups and pullups.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$(".ham-burger").click(function(){
+			$(".nav").toggleClass("open")
+			$(this).toggleClass("active")
+		})
+		$(".accordian-container").click(function(){
+			$(".accordian-container").children(".body").slideUp();
+			$(".accordian-container").removeClass("active")
+			$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+			$(this).children(".body").slideDown();
+			$(this).addClass("active")
+			$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+		})
+	})
+</script>
+</body>
+</html>
